@@ -1,0 +1,8 @@
+<h1>Welcome to your dashboard </h1>
+<%= link_to "Add a task", new_task_path %>
+<% @tasks.each do |task| %>
+<h3><%= link_to task.title, task_path(task) %></h3>
+<%= task.description %>
+<%= task.done %>
+<hr>
+<% end %>
